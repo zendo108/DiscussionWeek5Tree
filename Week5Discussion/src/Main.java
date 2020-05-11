@@ -19,9 +19,9 @@ public class Main {
 	}
 	
 	public static void insert(Node node, int value) {
-        if (value < node.value) {
-          if (node.left != null) {
-            insert(node.left, value);
+        if (value < node.value) {//if new value < than current node value
+          if (node.left != null) {//if current node left child is not null, meaning there is a child there
+            insert(node.left, value);//try insert the a new node under that left child node with a recursive insert call
           } else {
             System.out.println(" Inserted " + value + " to left of "
                 + node.value);
